@@ -55,7 +55,7 @@ def get_top_artists(sp_object, top_limit):
 
     top_artist_names = []
     top_uri = []
-    results = sp_object.current_user_top_artists(limit=top_limit, offset=0, time_range='short_term')
+    results = sp_object.current_user_top_artists(limit=top_limit, offset=0, time_range='medium_term')
     for item in results['items'][:top_limit]:
         top_artist_names.append(item['name'])
         top_uri.append(item['uri'])
